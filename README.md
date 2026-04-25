@@ -1,2 +1,0 @@
-# tes-kedua
-tes doang

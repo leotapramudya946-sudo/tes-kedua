@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Untuk Kamu</title>
+
+<style>
+body {
+    margin: 0;
+    overflow: hidden;
+    background: black;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* Bintang */
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+/* Teks */
+.text {
+    position: absolute;
+    font-size: 20px;
+    color: #ff66cc;
+    animation: float 10s linear infinite;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(100vh);
+    }
+    to {
+        transform: translateY(-10vh);
+    }
+}
+
+/* Tengah */
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.center img {
+    width: 160px;
+    border-radius: 15px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="center">
+    <!-- GANTI NAMA FILE DI SINI -->
+    <img src="foto.jpg" alt="Temenku">
+
+    <p>Hafshah Aulia</p>
+</div>
+
+<script>
+
+/* Bintang */
+for (let i = 0; i < 100; i++) {
+    let star = document.createElement("div");
+    star.className = "star";
+    star.style.left = Math.random() * 100 + "vw";
+    star.style.animationDuration = (Math.random() * 5 + 3) + "s";
+    document.body.appendChild(star);
+}
+
+/* Nama melayang */
+for (let i = 0; i < 25; i++) {
+    let t = document.createElement("div");
+    t.className = "text";
+    t.innerText = "Hafshah Aulia";
+    t.style.left = Math.random() * 100 + "vw";
+    t.style.animationDuration = (Math.random() * 10 + 5) + "s";
+    document.body.appendChild(t);
+}
+
+</script>
+
+</body>
+</html>
